@@ -1,0 +1,24 @@
+{
+  "userName":"Pitoko",
+  "password":"223331",
+  "email":"pitoko.punk666@gmail.com",
+  "profilePicture":"333211",
+  "isArtist":true,
+  "roles":"VIEWER",
+  "location":"Paraná",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "spotify": "FunPeople Official",
+  "youTube": "FunPeople Official"
+}
+{
+  "userName":"Fun People",
+  "password":"223331",
+  "email":"fun.people_1999@gmail.com",
+  "profilePicture":"333211",
+  "isArtist":true,
+  "roles":"ARTIST",
+  "location":"Campana",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "spotify": "FunPeople Official",
+  "youTube": "FunPeople Official"
+}
