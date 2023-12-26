@@ -42,7 +42,7 @@
 - [ ] __PATCH deleteNew/:idNew__ 
   -  Borra la noticia indicada por el id (idNew) que se envía por **PARAMS**.
 
-> Todas las request de Admin, antes de devolver los datos verifica que el usuario que hace la petición sea el admin con el middleware **verifyIsAdmin**.
+> Todas las request de Admin, antes de devolver los datos verifica que el usuario que hace la petición sea el admin con el middleware **verifyAdmin**.
 
 
 
