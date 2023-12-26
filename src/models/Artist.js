@@ -1,40 +1,28 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db.js";
+import User from "./User.js";
 //string
 const ArtistSchema = sequelize.define('Artist',{
     id:{
         type:DataTypes.UUID,
         defaultValue:DataTypes.UUIDV4,
+        primaryKey:true,
         allowNull:false,
-        primaryKey:true
-    },
-    name:{
-        type: DataTypes.STRING,
-        allowNull:false
     },
     description:{
         type:DataTypes.STRING,
-        allowNull:false
+        defaultValue:null
     },
     spotify:{
         type:DataTypes.STRING,
-        allowNull:false
+        defaultValue:null
     },
     youTube:{
         type:DataTypes.STRING,
-        allowNull:false
-    },
-    pictures:{
-        type:DataTypes.STRING,
-        allowNull:false
-    },
-    password:{
-        type: DataTypes.STRING
-    },
-    email:{
-        type: DataTypes.STRING,
-        allowNull: false
+        defaultValue:null
     }
 })
 
-export default ArtistSchema
+User.hasOne(ArtistSchema);
+
+export default ArtistSchema;

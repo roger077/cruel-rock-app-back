@@ -3,12 +3,13 @@ import sequelize from "../db.js";
 import bcryptjs from "bcryptjs"
 //string
 const UserSchema = sequelize.define('User',{
+    /*
     id:{
         type:DataTypes.UUID,
         defaultValue:DataTypes.UUIDV4,
         allowNull:false,
-        primaryKey:true
     },
+    */
     userName:{
         type: DataTypes.STRING,
         allowNull: false
@@ -23,48 +24,12 @@ const UserSchema = sequelize.define('User',{
     },
     email:{
         type: DataTypes.STRING,
-        allowNull: false
-    },
-
-    description:{
-        type:DataTypes.STRING,
-        defaultValue:null,
-        set(value){
-            const roll = this.getDataValue('roles')
-            if(roll==='ARTIST')
-                this.setDataValue('description',value)
-        }
-    },
-    spotify:{
-        type:DataTypes.STRING,
-        defaultValue:null,
-        set(value){
-            const roll = this.getDataValue('roles')
-            if(roll==='ARTIST')
-                this.setDataValue('spotify',value)
-        }
-    },
-    youTube:{
-        type:DataTypes.STRING,
-        defaultValue:null,
-        set(value){
-            const roll = this.getDataValue('roles')
-            if(roll==='ARTIST')
-                this.setDataValue('youTube',value)
-        }
+        allowNull: false,
+        primaryKey:true
     },
     pictures:{
         type:DataTypes.STRING,
-        defaultValue:null,
-        set(value){
-            const roll = this.getDataValue('roles')
-            if(roll==='ARTIST')
-                this.setDataValue('pictures',value)
-        }
-    },
-    roles:{
-        type:DataTypes.ENUM('ARTIST',"VIEWER","ADMIN"),
-        allowNull:false
+        defaultValue:null
     },
     isBanned:{
         type: DataTypes.BOOLEAN,
@@ -84,4 +49,4 @@ const UserSchema = sequelize.define('User',{
     timestamps: false,
 })
 
-export default UserSchema
+export default UserSchema;
