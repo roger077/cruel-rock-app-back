@@ -16,5 +16,6 @@ export {
     User,   
     Artist, 
     Viewer,   
-    New
+    New,
+    //Review
 }
