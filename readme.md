@@ -53,14 +53,18 @@
 - [ ] __GET /followedArtists/:idUser__
   - Devuelve los artistas seguidos por el usuario indicado por el id (idUser) que se envía por **PARAMS**.
 
-
-## VIEWER
-
+- [ ] __POST /artist__
+  - Debe pasar por el middleware **verifyUserExist**, en caso de que no exista será registrado con éxito, de lo contrario no se registrará. 
 - [ ] __POST new/:idArtist__
   - Postea una New enviada por body, perteneciente al artista indicado por el id (idArtist) que se envía por **PARAMS**.
   - Debe pasar por el middleware **verifyIsArtist** para verificar que el usuario sea un artista.
 - [ ] __PATCH new/:idNew__
   - Modifica la New indicada por el id (idNew) que se envía por **PARAMS**, con el estado que se le pase a la request por body.
+
+## VIEWER
+
+- [ ] __PATCH /follow/:idArtist__
+- [ ] __PATCH /unfollow/:idArtist__
 
 ## ADMIN
 
