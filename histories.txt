@@ -1,0 +1,5 @@
+Un Viewer puede suscribirse o cancelar la suscripción a un Artist (Patch Viewer)
+
+Un artista puede publicar news (POST news)
+
+Un artista puede eliminar una New que haya publicado (PATCH new)

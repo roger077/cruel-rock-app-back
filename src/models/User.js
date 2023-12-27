@@ -10,7 +10,7 @@ const UserSchema = sequelize.define('User',{
         allowNull:false,
     },
     */
-    userName:{
+    username:{
         type: DataTypes.STRING,
         allowNull: false
     },
