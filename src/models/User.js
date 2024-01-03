@@ -3,13 +3,6 @@ import sequelize from "../db.js";
 import bcryptjs from "bcryptjs"
 //string
 const UserSchema = sequelize.define('User',{
-    /*
-    id:{
-        type:DataTypes.UUID,
-        defaultValue:DataTypes.UUIDV4,
-        allowNull:false,
-    },
-    */
     username:{
         type: DataTypes.STRING,
         allowNull: false
@@ -28,7 +21,7 @@ const UserSchema = sequelize.define('User',{
         primaryKey:true
     },
     pictures:{
-        type:DataTypes.STRING,
+        type:[DataTypes.STRING],
         defaultValue:null
     },
     isBanned:{
@@ -41,9 +34,13 @@ const UserSchema = sequelize.define('User',{
         type: DataTypes.STRING,
         allowNull: false
     },
-    location:{
-        type: DataTypes.STRING,
-        allowNull: false
+    locationLatitude: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
+    },
+    locationLongitude: {
+        type: DataTypes.DOUBLE,
+        allowNull: true,
     }
 },{
     timestamps: false,

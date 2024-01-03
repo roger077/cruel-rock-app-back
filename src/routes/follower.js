@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { verifyArtist } from "../middlewares/verifyArtist.js";
+import verifyArtist from "../middlewares/verifyArtist.js";
 import { postFollower } from "../controllers/users/index.js";
 
 const router = Router();

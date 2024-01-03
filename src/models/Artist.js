@@ -20,9 +20,15 @@ const ArtistSchema = sequelize.define('Artist',{
     youTube:{
         type:DataTypes.STRING,
         defaultValue:null
+    },
+    genres:{
+        type:[DataTypes.STRING],
+        defaultValue:null
     }
+},{
+    timestamps: false,
 })
 
-User.hasOne(ArtistSchema);
+User.hasOne(ArtistSchema,{ foreignKey: 'UserEmail' });
 
 export default ArtistSchema;

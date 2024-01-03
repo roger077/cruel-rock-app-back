@@ -11,11 +11,11 @@ const ViewerSchema = sequelize.define("Viewer",{
         allowNull:false,
     },
     genresFavorites : {
-        type: DataTypes.TEXT,
-        allowNull:false
+        type: [DataTypes.STRING],
+        defaultValue:null,
     }
 })
 
-User.hasOne(ViewerSchema);
+User.hasOne(ViewerSchema,{ foreignKey: 'UserEmail' });
 export default ViewerSchema
 
